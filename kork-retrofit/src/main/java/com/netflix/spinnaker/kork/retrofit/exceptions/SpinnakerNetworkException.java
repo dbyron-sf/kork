@@ -22,16 +22,12 @@ import retrofit.RetrofitError;
 /** Wraps an exception of kind {@link RetrofitError.Kind} NETWORK. */
 @NonnullByDefault
 public final class SpinnakerNetworkException extends SpinnakerServerException {
-  public SpinnakerNetworkException(RetrofitError e) {
-    super(e);
-  }
-
-  public SpinnakerNetworkException(RetrofitException e) {
-    super(e);
-  }
-
   public SpinnakerNetworkException(String message, Throwable cause) {
     super(message, cause);
+  }
+
+  public SpinnakerNetworkException(Throwable cause) {
+    super(cause);
   }
 
   @Override
